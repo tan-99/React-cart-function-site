@@ -70,6 +70,14 @@ const PRODUCTS = [
       category: "evening",
       price: "15₹",
     },
+    {
+      id: 11,
+      image: "assets/products/samosa.jpg",
+      name: "Schezwan Samosa",
+      category: "evening",
+      price: "20₹",
+    },
+
   ];
   
   export default PRODUCTS;
