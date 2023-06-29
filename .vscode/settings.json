@@ -1,0 +1,9 @@
+{
+    "reactSnippets.settings.prettierEnabled": true,
+    "css.styleSheets": [
+        
+    ],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}

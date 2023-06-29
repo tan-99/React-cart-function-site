@@ -1,0 +1,49 @@
+.shopTitle{
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-container{
+    object-fit: contain;
+    display: flex;
+    height: 80%;
+    justify-content: center;
+}
+
+.prod-img{
+    width: 240px;
+}
+
+.products{
+    margin: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 100px;
+}
+
+.product{
+    box-shadow: 5px 3px 15px rgb(93, 93, 93);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details{
+    font-size: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.addCartBtn{
+    cursor: pointer;
+    width: 34%;
+    margin-bottom: 10px;
+    align-self: center;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: black;
+    padding: 8px 0;
+}
