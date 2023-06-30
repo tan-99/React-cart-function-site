@@ -1,12 +1,20 @@
 import React, { useContext } from 'react'
-import ShopContextProvider, { shopContext } from '../../context/shop-context'
+import { shopContext } from '../../context/shop-context'
 
 const Product = ({ data }) => {
 
     const { id, name, price, image } = data;
-    const { addToCart } = useContext(shopContext)
+    const { addToCart, cartItems } = useContext(shopContext)
+
+    var noOfItems;
+    var flag = false;
+    if(cartItems[id]!==undefined){
+      noOfItems = cartItems[id].prodFreq;
+      flag = true;
+    }
+
   return (
-    <div className="product">
+    <div className="product" key={id}>
         <div className="img-container">
             <img src={image} className='prod-img'/>
         </div>
@@ -15,7 +23,9 @@ const Product = ({ data }) => {
             <p><b>{name}</b></p>
             <p>{price}</p>
         </div>
-        <button className='addCartBtn' onClick={() => addToCart(id)}>Add To Cart</button>
+        <button className='addCartBtn' onClick={() => addToCart(id)}>
+          Add To Cart {flag==true && <> ({noOfItems})</>}
+        </button>
     </div>
   )
 }
