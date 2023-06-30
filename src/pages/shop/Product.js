@@ -6,6 +6,7 @@ const Product = ({ data }) => {
     const { id, name, price, image } = data;
     const { addToCart, cartItems } = useContext(shopContext)
 
+    /*Flag variable introduced to mark only those items in cart that have been added by the user, cartItems[id] of items not added returns undefined.*/
     var noOfItems;
     var flag = false;
     if(cartItems[id]!==undefined){
